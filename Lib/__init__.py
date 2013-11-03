@@ -18,15 +18,6 @@
 #                                                                               #
 #################################################################################
 """
-import vcs.info
-import sys
-if sys.executable[-4:]!='cdat' and sys.platform in ['darwin'] and (vcs.info.WM=='QT' or vcs.info.EM=='QT'):
-    raise ImportError,"if you are going to use vcs you need to run this as 'cdat' not %s" % sys.executable
-import cdat_info
-cdat_info.pingPCMDIdb("cdat","vcs")
-import slabapi # to make sure it is initialized
-import _vcs
-import thread
 import time
 import Canvas
 from vcshelp import *
@@ -39,6 +30,8 @@ from Canvas import dictionarytovcslist
 
 _default_time_units='days since 2000'
 
+def getdotdirectory():
+    return ".uvcdat","VCSMP_DIRECTORY"
 #from _vcs import polygons
 #from vcs import Meshes
 
@@ -48,14 +41,14 @@ _default_time_units='days since 2000'
 # $PYTHONHOME/bin to the newly created $HOME/.uvcdat directory.          #
 #                                                                               #
 #################################################################################
-install_vcs._files()
+#install_vcs._files()
 
 #################################################################################
 #                                                                               #
 # Set the user's XGKSFontDir environment variable.                              #
 #                                                                               #
 #################################################################################
-install_vcs._XGKSFontDir()
+#install_vcs._XGKSFontDir()
 
 #################################################################################
 #                                                                               #

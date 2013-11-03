@@ -28,7 +28,7 @@
 #         Python.							      #
 #                                                                             #
 ###############################################################################
-import _vcs, copy, vcs, numpy
+import copy, numpy
 from Ptext import *
 from Pformat import *
 from Pxtickmarks import *

@@ -1,6 +1,5 @@
 # Adapted for numpy/ma/cdms2 by convertcdms.py
-import _vcs
-import vcs,cdtime,queries
+import cdtime,queries
 import numpy
 
 class PPE(Exception):

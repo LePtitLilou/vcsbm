@@ -1,5 +1,5 @@
 # Adapted for numpy/ma/cdms2 by convertcdms.py
-import vcs,numpy.ma,sys,string,colors,numpy,cdms2,types,VCS_validation_functions
+import numpy.ma,sys,string,colors,numpy,cdms2,types,VCS_validation_functions
 import MV2
 
 def createnewvcsobj(canvas,type,basenm,src='default',src2='default'):

@@ -45,7 +45,7 @@ def objecthelp(*arg):
 # Import: VCS and query module.                                               #
 #                                                                             #
 ###############################################################################
-import vcs, queries
+import queries
 
 def help(*arg):
 

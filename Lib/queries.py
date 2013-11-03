@@ -30,8 +30,6 @@ import boxfill, isofill, isoline, outfill, outline, taylor, meshfill
 import xyvsy, yxvsx, xvsy, vector, scatter, continents, line, marker, fillarea
 import texttable, textorientation, textcombined, template
 import displayplot, projection
-import vcs
-import vcsaddons
 
 from error import vcsError
 
@@ -81,8 +79,8 @@ def isgraphicsmethod(gobj):
             return 1
         elif (isinstance(gobj,meshfill.Gfm)):
             return 1
-	elif isinstance(gobj,vcsaddons.core.VCSaddon):
-	    return 1
+#	elif isinstance(gobj,vcsaddons.core.VCSaddon):
+#	    return 1
         else:
            return 0
 
@@ -149,8 +147,8 @@ def graphicsmethodtype(gobj):
             return 'taylordiagram'
         elif (isinstance(gobj,meshfill.Gfm)):
             return 'meshfill'
-	elif isinstance(gobj,vcsaddons.core.VCSaddon):
-	    return gobj
+#	elif isinstance(gobj,vcsaddons.core.VCSaddon):
+#	    return gobj
         else:
            raise vcsError, 'The object passed is not a graphics method object.'
 

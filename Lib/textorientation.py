@@ -27,7 +27,6 @@
 # Import: VCS C extension module.                                               #
 #                                                                               #
 #################################################################################
-import _vcs
 import Canvas
 from types import *
 import VCS_validation_functions

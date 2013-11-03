@@ -5,9 +5,10 @@
 # user's $HOME/.uvcdat directory.                                    #
 #                                                                           #
 #############################################################################
+import vcsmp
 def _files():
-   import sys, os, shutil,vcs
-   dotdir, dotdirenv = vcs.slabapi.getdotdirectory()
+   import sys, os, shutil
+   dotdir, dotdirenv = vcsmp.getdotdirectory()
    #
    # Create .uvcdat directory if it does not exist
    try:
@@ -27,7 +28,7 @@ def _files():
          sys.exit()
    #
    # Copy the initial.attributes file to the user's $HOME/.uvcdat directory
-   init_file_cp = os.path.join(vcs.__path__[0],'..','..','..','..', 'bin', 'initial.attributes')
+   init_file_cp = os.path.join(vcsmp.__path__[0],'..','..','..','..', 'bin', 'initial.attributes')
    init_file = os.path.join( fn, 'initial.attributes')
    if (os.access(init_file_cp, os.F_OK) == 1)  and (os.path.isfile(init_file) == 0):
       shutil.copyfile(init_file_cp, init_file)

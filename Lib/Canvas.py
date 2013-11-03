@@ -32,7 +32,7 @@ import tempfile
 from pauser import pause
 import thread
 import numpy.ma, MV2
-import numpy, cdutil
+import numpy
 from queries import *
 import boxfill, isofill, isoline, outfill, outline, taylor, meshfill, projection
 import xyvsy, yxvsx, xvsy, vector, scatter, continents, line, marker, fillarea
@@ -49,11 +49,11 @@ import displayplot
 from error import vcsError
 import cdms2
 import copy
-import cdtime,vcs
+import cdtime
 import os
 import sys
 import random
-import genutil
+#import genutil
 from cdms2.grid import AbstractRectGrid
 import shutil
 from types import *
@@ -65,9 +65,9 @@ called_initial_attributes_flg = 0
 gui_canvas_closed = 0
 canvas_closed = 0
 #import Pmw
-import vcsaddons
+#import vcsaddons
 
-from PyQt4 import QtGui,QtCore
+#from PyQt4 import QtGui,QtCore
 ## class QAnimThread(QtCore.QThread):
 ##     def __init__(self,parent,func,*args):
 ##         QtCore.QThread.__init__(self,parent)
@@ -7324,7 +7324,7 @@ Options:::
               slab_name = scr_str.split('(')[0][2:]
               a=scr_str.split('",')
               for j in range(len(a)):
-                 b=a[j]s.plit('="')
+                 b=a[j].split('="')
                  if b[0][-4:].lower() == 'file':
                     fcdms=cdms2.open(b[1])                       # Open CDMS file
                  elif b[0][-8:].lower() == 'function':

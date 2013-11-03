@@ -23,7 +23,6 @@
 # Import: VCS C extension module.                                             #
 #                                                                             #
 ###############################################################################
-import _vcs
 from types import *
 import VCS_validation_functions
 #### from gm_core import * No need to import
